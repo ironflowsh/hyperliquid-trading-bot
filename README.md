@@ -42,7 +42,7 @@ To use a box you already have: `IRONFLOW_BOX_URL=https://api.ironflow.sh/box/ibx
 
 ## On Hyperliquid
 
-The same code can later point at Hyperliquid's API with your own keys: change `base_url` and the wallet in `connect()`. Ironflow never trades real money.
+The bot uses Hyperliquid's official Python SDK, pointed at a paper box. Ironflow never trades real money.
 
 This is an example, not trading advice.
 
