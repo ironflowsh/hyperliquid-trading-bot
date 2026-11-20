@@ -26,7 +26,6 @@ dry run: would buy 0.00324 BTC at market
 export HL_PRIVATE_KEY=0x...          # an API wallet key from app.hyperliquid.xyz/API
 export HL_ACCOUNT_ADDRESS=0x...      # the account the API wallet trades for
 python bot.py --trade testnet        # Hyperliquid testnet
-python bot.py --trade mainnet        # real funds
 ```
 
 Start on testnet. Use an API wallet, not your main private key: it can trade but cannot withdraw.
