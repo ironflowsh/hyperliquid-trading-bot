@@ -7,7 +7,7 @@ A Hyperliquid trading bot template. Signals come from Ironflow's Hyperliquid dat
 - Install: `pip install -r requirements.txt` (Python 3.9+), or `uv run bot.py`.
 - Test with `python bot.py --once`: one dry-run pass, then exit. Without `--once` it loops every 15 minutes.
 - No key needed for data. `IRONFLOW_KEY` (optional, free from https://ironflow.sh/key) raises the limits.
-- `--trade testnet` or `--trade mainnet` sends real orders and needs `HL_PRIVATE_KEY` (an API wallet key) and, for an API wallet, `HL_ACCOUNT_ADDRESS`. Never print, log or commit the key. Default to testnet.
+- `--trade testnet` sends orders to Hyperliquid testnet only and needs `HL_PRIVATE_KEY` (an API wallet key) and, for an API wallet, `HL_ACCOUNT_ADDRESS`. Never print, log or commit the key. The template does not place mainnet orders.
 
 ## Data calls
 

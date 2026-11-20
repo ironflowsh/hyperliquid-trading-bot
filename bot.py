@@ -6,7 +6,7 @@
 
 Signals come from Ironflow candles, and each run starts with the last hour of
 liquidations. By default it is a dry run: it prints the order it would send
-and places nothing. With --trade testnet (or mainnet) and HL_PRIVATE_KEY set,
+and places nothing. With --trade testnet and HL_PRIVATE_KEY set,
 it sends that order through the official Hyperliquid Python SDK.
 
     python bot.py                   # dry run every 15 minutes until Ctrl+C
@@ -120,7 +120,7 @@ def step(info: Info, exchange: Exchange | None, address: str | None) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--once", action="store_true", help="one pass, then exit")
-    parser.add_argument("--trade", choices=sorted(NETWORKS), help="place orders on this network (needs HL_PRIVATE_KEY)")
+    parser.add_argument("--trade", choices=["testnet"], help="place orders on Hyperliquid testnet (needs HL_PRIVATE_KEY)")
     args = parser.parse_args()
 
     exchange = address = None
